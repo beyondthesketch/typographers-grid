@@ -1,0 +1,16 @@
+@import './mixins/media-queries';
+
+html {
+    font-size: 12px;
+    line-height: 1.6rem;
+
+    @include smartphones {
+        font-size: 3.125vw;
+    }
+    @include phablets {
+        font-size: 62.5%;
+    }
+    @include HD {
+        font-size: 0.6944444444vw;
+    }
+}

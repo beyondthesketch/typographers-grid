@@ -1,0 +1,102 @@
+@use 'sass:math';
+@import './variables/settings';
+
+@mixin commonPhrasingSpacing {
+    box-sizing: border-box;
+    margin: 0 0 (math.div($typographersGridVerticalRhythm, 10) * 1rem);
+
+    // &:last-child {
+    //     margin-bottom: 0;
+    // }
+}
+
+body {
+    font-size: math.div($typographersGridBaseFontSize, 10) * 1rem;
+}
+
+
+p {
+    @include commonPhrasingSpacing;
+    // line-height: calc(var(--base-font-size) * var(--vertical-rhythm));
+    $lineHeightMultiplier: ceil(math.div(1.6rem, $typographersGridVerticalRhythm));
+    line-height: $lineHeightMultiplier * math.div($typographersGridVerticalRhythm, 10);
+}
+
+
+h1,
+.#{$typographersGridClassPrefix}_h1 {
+    @include commonPhrasingSpacing();
+    $headingFontSize: math.pow($typographersGridModularScale, 6) * ($typographersGridBaseFontSize * 1rem);
+    font-size: math.div($headingFontSize, 10);
+    line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+}
+
+h2,
+.#{$typographersGridClassPrefix}_h2 {
+    @include commonPhrasingSpacing();
+    $headingFontSize: math.pow($typographersGridModularScale, 5) * ($typographersGridBaseFontSize * 1rem);
+    font-size: math.div($headingFontSize, 10);
+    line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+}
+
+h3,
+.#{$typographersGridClassPrefix}_h3 {
+    @include commonPhrasingSpacing();
+    $headingFontSize: math.pow($typographersGridModularScale, 4) * ($typographersGridBaseFontSize * 1rem);
+    font-size: math.div($headingFontSize, 10);
+    line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+}
+
+h4,
+.#{$typographersGridClassPrefix}_h4 {
+    @include commonPhrasingSpacing();
+    $headingFontSize: math.pow($typographersGridModularScale, 3) * ($typographersGridBaseFontSize * 1rem);
+    font-size: math.div($headingFontSize, 10);
+    line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+}
+
+h5,
+.#{$typographersGridClassPrefix}_h5 {
+    @include commonPhrasingSpacing();
+    $headingFontSize: math.pow($typographersGridModularScale, 2) * ($typographersGridBaseFontSize * 1rem);
+    font-size: math.div($headingFontSize, 10);
+    line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+}
+
+h6,
+.#{$typographersGridClassPrefix}_h6 {
+    @include commonPhrasingSpacing();
+    $headingFontSize: $typographersGridModularScale * ($typographersGridBaseFontSize * 1rem);
+    font-size: math.div($headingFontSize, 10);
+    line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+}
+
+
+// ul,
+// ol {
+//     @if $proportionsGridUseCSSCustomProperties {
+//         margin: var(--pgrid-top-margin) 0 var(--pgrid-bottom-margin);
+//     }
+//     @else {
+//         margin: $proportionsGridMarginTop 0 $proportionsGridMarginBottom;
+//     }
+//     &:first-child {
+//         margin-top: 0;
+//     }
+//     &:last-child {
+//         margin-bottom: 0;
+//     }
+
+//     @if $proportionsGridUseCSSCustomProperties {
+//         padding: 0 0 0 var(--pgrid-top-bottom-padding); // special case that uses top/bottom for side padding
+//     }
+//     @else {
+//         padding: 0 0 0 $topBottomPadding; // special case that uses top/bottom for side padding
+//     }
+// }
+
+// basic responsive image rules
+img {
+    width: 100%;
+    height: auto;
+}

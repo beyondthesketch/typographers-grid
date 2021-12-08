@@ -1,0 +1,281 @@
+@use 'sass:math';
+@import './variables/settings';
+@import './mixins/media-queries';
+@import './typographers-grid.html';
+@import './typographers-grid.elements';
+
+.#{$typographersGridClassPrefix}_cr {
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 2.4rem;
+    padding: 0 3.2rem;
+}
+
+// Columns
+
+.#{$typographersGridClassPrefix}_c-1 {
+    grid-column:  auto / span 1;
+}
+
+.#{$typographersGridClassPrefix}_c-2 {
+    grid-column:  auto / span 2;
+}
+
+.#{$typographersGridClassPrefix}_c-3 {
+    grid-column:  auto / span 3;
+}
+
+.#{$typographersGridClassPrefix}_c-4 {
+    grid-column:  auto / span 4;
+}
+
+.#{$typographersGridClassPrefix}_c-5 {
+    grid-column:  auto / span 5;
+}
+
+.#{$typographersGridClassPrefix}_c-6 {
+    grid-column:  auto / span 6;
+}
+
+.#{$typographersGridClassPrefix}_c-7 {
+    grid-column:  auto / span 7;
+}
+
+.#{$typographersGridClassPrefix}_c-8 {
+    grid-column:  auto / span 8;
+}
+
+.#{$typographersGridClassPrefix}_c-9 {
+    grid-column:  auto / span 9;
+}
+
+.#{$typographersGridClassPrefix}_c-10 {
+    grid-column:  auto / span 10;
+}
+
+.#{$typographersGridClassPrefix}_c-11 {
+    grid-column:  auto / span 11;
+}
+
+.#{$typographersGridClassPrefix}_c-12 {
+    grid-column:  auto / span 12;
+}
+
+@include mobileAndSmaller {
+    .#{$typographersGridClassPrefix}_cr {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.2rem;
+        padding: 0 1.2rem;
+    }
+
+    .#{$typographersGridClassPrefix}_c-3,
+    .#{$typographersGridClassPrefix}_c-4,
+    .#{$typographersGridClassPrefix}_c-5,
+    .#{$typographersGridClassPrefix}_c-6,
+    .#{$typographersGridClassPrefix}_c-7,
+    .#{$typographersGridClassPrefix}_c-8,
+    .#{$typographersGridClassPrefix}_c-9,
+    .#{$typographersGridClassPrefix}_c-10,
+    .#{$typographersGridClassPrefix}_c-11,
+    .#{$typographersGridClassPrefix}_c-12 {
+        grid-column:  auto / span 2;
+    }
+}
+
+@include onlySmartphones {
+    .#{$typographersGridClassPrefix}_cr {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1.6rem;
+        padding: 0 1.6rem;
+    }
+
+    .#{$typographersGridClassPrefix}_smp_c-1 {
+        grid-column:  auto / span 1;
+    }
+
+    .#{$typographersGridClassPrefix}_smp_c-2 {
+        grid-column:  auto / span 2;
+    }
+
+    .#{$typographersGridClassPrefix}_smp_c-3 {
+        grid-column:  auto / span 3;
+    }
+
+    .#{$typographersGridClassPrefix}_smp_c-4 {
+        grid-column:  auto / span 4;
+    }
+
+    .#{$typographersGridClassPrefix}_c-5,
+    .#{$typographersGridClassPrefix}_c-6,
+    .#{$typographersGridClassPrefix}_c-7,
+    .#{$typographersGridClassPrefix}_c-8,
+    .#{$typographersGridClassPrefix}_c-9,
+    .#{$typographersGridClassPrefix}_c-10,
+    .#{$typographersGridClassPrefix}_c-11,
+    .#{$typographersGridClassPrefix}_c-12 {
+        grid-column:  auto / span 4;
+    }
+}
+
+@include onlyPhablets {
+    .#{$typographersGridClassPrefix}_cr {
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: minmax(24px, auto);
+        column-gap: 1.6rem;
+        padding: 0 2.4rem;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-1 {
+        grid-column:  auto / span 1;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-2 {
+        grid-column:  auto / span 2;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-3 {
+        grid-column:  auto / span 3;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-4 {
+        grid-column:  auto / span 4;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-5 {
+        grid-column:  auto / span 5;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-6 {
+        grid-column:  auto / span 6;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-7 {
+        grid-column:  auto / span 7;
+    }
+
+    .#{$typographersGridClassPrefix}_pbl_c-8 {
+        grid-column:  auto / span 8;
+    }
+
+    .#{$typographersGridClassPrefix}_c-9,
+    .#{$typographersGridClassPrefix}_c-10,
+    .#{$typographersGridClassPrefix}_c-11,
+    .#{$typographersGridClassPrefix}_c-12 {
+        grid-column:  auto / span 8;
+    }
+}
+
+@include onlyTablets {
+    .#{$typographersGridClassPrefix}_cr {
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(24px, auto);
+        column-gap: 2.4rem;
+        padding: 0 3.2rem;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-1 {
+        grid-column:  auto / span 1;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-2 {
+        grid-column:  auto / span 2;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-3 {
+        grid-column:  auto / span 3;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-4 {
+        grid-column:  auto / span 4;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-5 {
+        grid-column:  auto / span 5;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-6 {
+        grid-column:  auto / span 6;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-7 {
+        grid-column:  auto / span 7;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-8 {
+        grid-column:  auto / span 8;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-9 {
+        grid-column:  auto / span 9;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-10 {
+        grid-column:  auto / span 10;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-11 {
+        grid-column:  auto / span 11;
+    }
+
+    .#{$typographersGridClassPrefix}_tbl_c-12 {
+        grid-column:  auto / span 12;
+    }
+}
+
+@include desktops {
+    .#{$typographersGridClassPrefix}_cr {
+        grid-template-columns: repeat(12, 1fr);
+        grid-auto-rows: minmax(24px, auto);
+        column-gap: 2.4rem;
+        padding: 0 4.8rem;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-1 {
+        grid-column:  auto / span 1;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-2 {
+        grid-column:  auto / span 2;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-3 {
+        grid-column:  auto / span 3;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-4 {
+        grid-column:  auto / span 4;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-5 {
+        grid-column:  auto / span 5;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-6 {
+        grid-column:  auto / span 6;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-7 {
+        grid-column:  auto / span 7;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-8 {
+        grid-column:  auto / span 8;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-9 {
+        grid-column:  auto / span 9;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-10 {
+        grid-column:  auto / span 10;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-11 {
+        grid-column:  auto / span 11;
+    }
+
+    .#{$typographersGridClassPrefix}_dsk_c-12 {
+        grid-column:  auto / span 12;
+    }
+}

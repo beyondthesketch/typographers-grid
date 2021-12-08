@@ -1,0 +1,15 @@
+{
+  "name": "typographers-grid",
+  "version": "0.1.0",
+  "description": "A traditional 12 column layout system with a focus on vertical rythm",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "sass src/scss/:dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nazeer Ruhomutally <nazeer@beyondthesketch.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.43.2"
+  }
+}
