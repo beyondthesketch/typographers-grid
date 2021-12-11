@@ -59,8 +59,8 @@ The categories are:
 | Smartphones   | 320 > 639          | 4         | 16             | 16             |
 | Phablets      | 649 - 1023         | 8         | 16             | 24             |
 | Tablets       | 1024 - 1279        | 12        | 24             | 32             |
-| Desktops      | 1280 - 1440        | 12        | 24             | 48             |
-| HD            | 1440+              | 12        | 24             | 48             |
+| Desktops      | 1280 - 1440        | 12        | 24             | 32             |
+| HD            | 1440+              | 12        | 24             | 32             |
 
 ## Content Rows (class: tgrid_cr)
 
