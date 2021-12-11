@@ -66,7 +66,7 @@ The categories are:
 
 These are column-containing elements that are always structural and may be semantic - such as `<div>`, `<section>`, `<article>` etc. The purpose of these elements are simply to contain the columns which produce the layout for that row.
 
-## Columns (class: tgrid_c-*)
+## Columns (class: tgrid_c-\*\*)
 
 A **Column** holds content and must be a child of a **Content Row**.
 
@@ -74,3 +74,21 @@ Columns specify their widths using a number which describes it's *span*. Columns
 
 As this is a responsive system, different *breakpoints* can have different number of columns in a row. The Typographer's Grid allows you to set columns without considering this and will automatically size the columns for optimal display across all breakpoints. However, it also offers columns for specific breakpoints so you have complete control over your layout.
 
+## Breakpoint Specific Columns (class: trgrid_\*\*\*_c-\*\*)
+
+Each **device category** has specific classes which can be used to apply a particulr **Column** span for that particular category. The breakpoint specific classes use the `trgid` prefix followed by an `_` character, then a three character **device category identifier**, then another `_` character and finally, a `c-x` where `x` is the span of columns to use:
+
+```
+tgrid_<cat>_c-<span>
+```
+
+The table below shows the id's and available columns for each category:
+
+| Device Type   | Category ID        | Columns    | Example        |
+|:--------------|:-------------------|:---------- |:---------------|
+| Mobiles       | N/A                | -          | -              |
+| Smartphones   | smp                | c-1 ~ c-4  | tgrid_smp_c-2  |
+| Phablets      | pbl                | c-1 ~ c-8  | tgrid_pbl_c-4  |
+| Tablets       | tbl                | c-1 ~ c-12 | tgrid_tbl_c-6  |
+| Desktops      | dsk                | c-1 ~ c-12 | tgrid_dsk_c-12 |
+| HD            | N/A                | -          | -              |
