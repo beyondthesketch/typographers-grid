@@ -12,7 +12,7 @@ There are many layout systems that typographers and web designers can use, but s
 
 The Typographer's Grid is all about content, and therefore you *must write HTML semantically*. This is less about the structural and sectioning elements, but the content elements the flow elements - i.e. Use the appropriate heading elements where you need a heading - not a styled `<p>` tags or similar.
 
-## Vertical Rhythm
+## Vertical Rhythm
 
 The Typopgrapher's grid is a column based layout system with a baked-in vertical rhythm of `24px`; often seen as the defacto spacing.
 
@@ -76,9 +76,9 @@ Columns specify their widths using a number which describes it's *span*. Columns
 
 As this is a responsive system, different *breakpoints* can have different number of columns in a row. The Typographer's Grid allows you to set columns without considering this and will automatically size the columns for optimal display across all breakpoints. However, it also offers columns for specific breakpoints so you have complete control over your layout.
 
-## Breakpoint Specific Columns (class: trgrid_\*\*\*_c-\*\*)
+## Breakpoint Specific Columns (class: tgrid_\*\*\*_c-\*\*)
 
-Each **device category** has specific classes which can be used to apply a particulr **Column** span for that particular category. The breakpoint specific classes use the `trgid` prefix followed by an `_` character, then a three character **device category identifier**, then another `_` character and finally, a `c-x` where `x` is the span of columns to use:
+Each **device category** has specific classes which can be used to apply a particulr **Column** span for that particular category. The breakpoint specific classes use the `tgrid` prefix followed by an `_` character, then a three character **device category identifier**, then another `_` character and finally, a `c-x` where `x` is the span of columns to use:
 
 ```
 tgrid_<cat>_c-<span>
