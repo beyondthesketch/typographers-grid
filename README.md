@@ -1,3 +1,5 @@
+<p align="center"><img src="https://www.beyondthesketch.com/images/tgrid-logo.svg" width="200" height="200" style="display: block;margin: 0 auto 48px;"></p>
+
 # Typographer's Grid
 
 Text is the lifeblood of the web. So typography is of immense concern to any web design.
