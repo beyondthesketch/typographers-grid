@@ -4,12 +4,23 @@
   "description": "A traditional 12 column layout system with a focus on vertical rythm",
   "main": "index.js",
   "scripts": {
+    "build": "sass --no-source-map --style=compressed src/scss/:dist/",
+    "postbuild": "postcss dist/*.css --no-map --use autoprefixer -d dist/legacy/",
     "build:dev": "sass src/scss/:dist/",
+    "postbuild:dev": "postcss dist/*.css --use autoprefixer -d dist/legacy/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nazeer Ruhomutally <nazeer@beyondthesketch.com>",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.43.2"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "IE 10"
+  ]
 }
