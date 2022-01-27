@@ -1,5 +1,6 @@
 @use 'sass:math';
 @import './variables/settings';
+@import './mixins/media-queries';
 
 @mixin commonPhrasingSpacing {
     box-sizing: border-box;
@@ -99,4 +100,121 @@ h6,
 img {
     width: 100%;
     height: auto;
+}
+
+@include onlySmartphones {
+    .#{$typographersGridClassPrefix}_smp_h1 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 6) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_smp_h2 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 5) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_smp_h3 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 4) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_smp_h4 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 3) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_smp_h5 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 2) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_smp_h6 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: $typographersGridModularScale * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+}
+
+@include onlyPhablets {
+    .#{$typographersGridClassPrefix}_pbl_h1 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 6) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_pbl_h2 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 5) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_pbl_h3 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 4) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_pbl_h4 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 3) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_pbl_h5 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 2) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_pbl_h6 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: $typographersGridModularScale * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+}
+
+@include onlyTablets {
+    .#{$typographersGridClassPrefix}_tbl_h1 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 6) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_tbl_h2 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 5) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_tbl_h3 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 4) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_tbl_h4 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 3) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_tbl_h5 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: math.pow($typographersGridModularScale, 2) * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
+    .#{$typographersGridClassPrefix}_tbl_h6 {
+        @include commonPhrasingSpacing();
+        $headingFontSize: $typographersGridModularScale * ($typographersGridBaseFontSize * 1rem);
+        font-size: math.div($headingFontSize, 10);
+        line-height: math.ceil(math.div($headingFontSize, $typographersGridVerticalRhythm)) * math.div($typographersGridVerticalRhythm, 10);
+    }
 }
