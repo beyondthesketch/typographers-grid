@@ -57,12 +57,12 @@ The categories are:
 
 | Device Type   | Width Range        | Columns   | Gutters        | Margins        |
 |:--------------|:-------------------|:----------|:---------------|:---------------|
-| Mobiles       | 0 > 319            | 2         | 12             | 12             |
-| Smartphones   | 320 > 639          | 4         | 16             | 16             |
-| Phablets      | 649 - 1023         | 8         | 16             | 24             |
-| Tablets       | 1024 - 1279        | 12        | 24             | 32             |
-| Desktops      | 1280 - 1440        | 12        | 24             | 32             |
-| HD            | 1440+              | 12        | 24             | 32             |
+| Mobiles       | < 320            | 2         | 12             | 12             |
+| Smartphones   | 320 ~ 639          | 4         | 16             | 16             |
+| Phablets      | 640 ~ 1023         | 8         | 16             | 24             |
+| Tablets       | 1024 ~ 1279        | 12        | 24             | 32             |
+| Desktops      | 1280 ~ 1440        | 12        | 24             | 32             |
+| HD            | > 1440              | 12        | 24             | 32             |
 
 ## Content Rows (class: tgrid_cr)
 
